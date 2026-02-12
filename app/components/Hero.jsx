@@ -128,7 +128,7 @@ export default function Hero() {
         >
           <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.5em] text-white/70">
             <span className="h-2 w-2 rounded-full bg-(--accent)" aria-hidden />
-            Currently shipping for AI labs & climate teams
+            Developing tools for real-world impact
           </p>
           <div className="space-y-6">
             <h1 className="text-4xl font-semibold leading-[1.08] text-white sm:text-5xl lg:text-[4.6rem] lg:leading-[1.02]">

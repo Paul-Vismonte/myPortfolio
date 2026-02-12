@@ -16,7 +16,7 @@ const dancingScript = Dancing_Script({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
+  title: "Paul Portfolio",
   description: "Interactive portfolio website",
 };
 
