@@ -5,7 +5,7 @@ import Card from "./Card";
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Education", href: "#education" },
-  { label: "Work", href: "#work" },
+  { label: "Experience", href: "#work" },
   { label: "Skills", href: "#stack" },
   { label: "Projects", href: "#projects" },
 ];

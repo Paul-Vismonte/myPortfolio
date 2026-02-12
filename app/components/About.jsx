@@ -159,8 +159,8 @@ export default function About() {
               <div className="rounded-[30px] bg-[rgba(9,13,35,0.85)] p-5 shadow-[0_25px_50px_rgba(5,8,22,0.7)]">
                 <div className="relative mx-auto h-48 w-48 rounded-full bg-linear-to-br from-(--accent) to-(--accent-strong) p-[6px] shadow-[0_0_45px_rgba(145,94,255,0.5)]">
                   <img
-                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80"
-                    alt="Portrait"
+                    src="/profile.jpg"
+                    alt="Paul Vismonte"
                     className="h-full w-full rounded-full border-[6px] border-[rgba(5,8,22,0.9)] object-cover"
                   />
                 </div>
@@ -310,7 +310,7 @@ export default function About() {
             <p className="text-xs font-semibold uppercase tracking-[0.6em] text-(--muted)">
               My professional journey
             </p>
-            <h2 className="text-5xl font-semibold text-white">Work Experience</h2>
+            <h2 className="text-5xl font-semibold text-white">Experience</h2>
             <p className="text-base text-white/70">
               A rotating roster of roles focused on systems thinking, shipping velocity, and story-driven craft.
             </p>
