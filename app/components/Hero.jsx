@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Card from "./Card";
 
 const navItems = [
@@ -25,6 +26,8 @@ const focusAreas = [
 ];
 
 export default function Hero() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <section className="relative z-10 flex min-h-screen flex-col gap-12 overflow-hidden px-6 pb-24 pt-10 lg:px-20">
       <div className="pointer-events-none absolute inset-0 -z-10">
@@ -36,13 +39,36 @@ export default function Hero() {
       <header className="relative overflow-hidden rounded-3xl border border-white/10 bg-[rgba(5,8,22,0.85)]/90 px-6 py-5 shadow-[0_25px_70px_rgba(3,4,15,0.65)]">
         <div className="pointer-events-none absolute inset-0 -z-10 opacity-50 bg-[radial-gradient(circle_at_top_left,rgba(145,94,255,0.4),transparent_60%),radial-gradient(circle_at_bottom_right,rgba(0,180,255,0.35),transparent_60%)]" />
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div className="flex items-center gap-4">
-            <span className="rounded-2xl bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.5em] text-white/80">
-              PV · 2026
-            </span>
-            <p className="font-script text-2xl text-white">Portfolio</p>
+          <div className="flex items-center justify-between w-full md:w-auto">
+            <div className="flex items-center gap-4">
+              <span className="rounded-2xl bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.5em] text-white/80">
+                PV · 2026
+              </span>
+              <p className="font-script text-2xl text-white">Portfolio</p>
+            </div>
+            
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg border border-white/10 bg-white/5 transition hover:bg-white/10"
+              aria-label="Toggle menu"
+            >
+              <div className="relative w-5 h-5 flex flex-col justify-center items-center">
+                <span 
+                  className={`absolute h-0.5 w-4 bg-white transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-0' : '-translate-y-1.5'}`}
+                />
+                <span 
+                  className={`h-0.5 w-4 bg-white transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}
+                />
+                <span 
+                  className={`absolute h-0.5 w-4 bg-white transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 translate-y-0' : 'translate-y-1.5'}`}
+                />
+              </div>
+            </button>
           </div>
-          <nav className="flex flex-wrap items-center gap-3 text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-white/70">
+          
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex flex-wrap items-center gap-3 text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-white/70">
             {navItems.map((item) => (
               <a
                 key={item.label}
@@ -60,6 +86,37 @@ export default function Hero() {
             </a>
           </nav>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden border-t border-white/10 pt-4 mt-4"
+          >
+            <nav className="flex flex-col gap-2 text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-white/70">
+              {navItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="rounded-full px-4 py-3 transition hover:text-white hover:bg-white/5"
+                >
+                  {item.label}
+                </a>
+              ))}
+              <a
+                href="#contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="rounded-full bg-white/15 px-4 py-3 text-white shadow-[0_0_18px_rgba(145,94,255,0.4)] transition hover:bg-white/25"
+              >
+                Contact
+              </a>
+            </nav>
+          </motion.div>
+        )}
       </header>
 
       <div className="grid gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-start">

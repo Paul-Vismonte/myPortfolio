@@ -217,7 +217,7 @@ export default function About() {
               <div className="rounded-2xl border border-white/5 bg-white/5 p-4 shadow-[0_15px_35px_rgba(5,8,22,0.4)]">
                 <p className="text-xs uppercase tracking-[0.5em] text-white/50">Origin story</p>
                 <p className="mt-2 text-base text-white">
-                  Systems thinker raised on theme parks, arcades, and late-night design jams.
+                  Aspiring to become a full-stack developer, with burning passion for creating innovative solutions.
                 </p>
               </div>
               <div className="rounded-2xl border border-white/5 bg-white/5 p-4">
