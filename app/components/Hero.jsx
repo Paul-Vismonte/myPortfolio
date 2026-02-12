@@ -20,9 +20,9 @@ const quickLinks = [
 ];
 
 const focusAreas = [
-  { title: "Motion systems", copy: "Framer Motion choreo + GSAP timelines" },
-  { title: "Realtime co-pilot", copy: "WebGL canvases for data-heavy dashboards" },
-  { title: "AI-first sprints", copy: "Pairing founders to prototype in days" },
+  { title: "2D Game Dev, Unity Engine", copy: "Ironbound Climb " },
+  { title: "Book Search, Integrating APIs to fetch and display data", copy: "BookSeek" },
+  { title: "", copy: "" },
 ];
 
 export default function Hero() {
@@ -139,7 +139,7 @@ export default function Hero() {
               with cinematic code.
             </h1>
             <p className="max-w-2xl text-lg text-white/70">
-              Borrowing Sunny Patel&apos;s glassy neon palette, I craft expressive front-ends that balance
+              I craft expressive front-ends that balance
               storytelling, motion design, and performance. From hero experiments to production systems,
               every detail is intentional.
             </p>
@@ -194,10 +194,10 @@ export default function Hero() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.5em] text-white/60">Now building</p>
-                <h3 className="mt-3 text-2xl font-semibold text-white">watsonx design language</h3>
+                <h3 className="mt-3 text-2xl font-semibold text-white">Projects in Progress</h3>
               </div>
               <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.5em] text-white/70">
-                2026
+                2025 - 2026
               </span>
             </div>
             <ul className="mt-6 space-y-3 text-sm text-white/80">

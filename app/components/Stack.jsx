@@ -32,7 +32,7 @@ export default function Stack() {
         viewport={{ once: true, margin: "-100px" }}
         className="space-y-6 text-center lg:text-left"
       >
-        <p className="text-xs font-semibold uppercase tracking-[0.6em] text-(--muted)">Stack</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.6em] text-(--muted)">Skills</p>
         <div className="space-y-4">
           <h2 className="text-3xl font-semibold text-white sm:text-4xl lg:text-[2.9rem]">
             Tools powering these cinematic front-end builds.
