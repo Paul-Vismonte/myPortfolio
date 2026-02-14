@@ -7,8 +7,8 @@ const navItems = [
   { label: "About", href: "#about" },
   { label: "Education", href: "#education" },
   { label: "Experience", href: "#work" },
-  { label: "Skills", href: "#stack" },
   { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#stack" },
 ];
 
 const stats = [
@@ -22,7 +22,7 @@ const quickLinks = [
 const focusAreas = [
   { title: "2D Game Dev, Unity Engine", copy: "Ironbound Climb " },
   { title: "Book Search, Integrating APIs to fetch and display data", copy: "BookSeek" },
-  { title: "", copy: "" },
+  { title: "Marketing, POS Website", copy: "BarberHub" },
 ];
 
 export default function Hero() {
@@ -197,7 +197,7 @@ export default function Hero() {
                 <h3 className="mt-3 text-2xl font-semibold text-white">Projects in Progress</h3>
               </div>
               <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.5em] text-white/70">
-                2025 - 2026
+                2026
               </span>
             </div>
             <ul className="mt-6 space-y-3 text-sm text-white/80">

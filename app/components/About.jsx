@@ -96,33 +96,33 @@ const featuredProjects = [
 
 const educationTimeline = [
   {
-    range: "2022 — Present",
-    role: "Honours BSc Computer Science · Ontario Tech University",
+    range: "May — July (2025)",
+    role: "AP Global IT Solutions Inc.",
     summary:
-      "Exploring cloud-native architectures, distributed systems, and human-computer interaction.",
+      "Studied in AP Global IT Solutions Inc as a Web Designer for Internship for 2 months.",
   },
   {
-    range: "2018 — 2022",
-    role: "Diploma · Software Engineering Technology",
-    summary: "Graduated with distinction while leading the campus developer club.",
+    range: "2022 — 2023",
+    role: "Web Developer Course Online",
+    summary: "Online Web Developer courses teach how to build and manage Website Designs Front-end and Back-end.",
   },
 ];
 
 const experienceTimeline = [
   {
-    range: "2023 — Now",
-    role: "Lead Front-end, Studio Aster",
-    summary: "Shipping narrative-rich marketing sites for climate tech + AI teams.",
+    range: "2022 — 2026",
+    role: "Holy Cross College",
+    summary: "Studied and Finished 4 years of Bachelor of Science in Computer Science",
   },
   {
-    range: "2020 — 2023",
-    role: "Senior Creative Developer, Indie Labs",
-    summary: "Built award-winning experiences for Nike, Coinbase, and activist orgs.",
+    range: "2016 — 2022",
+    role: "San Luis National High School",
+    summary: "Finished Grade 7 to 12 with a strand of ICT",
   },
   {
-    range: "2017 — 2020",
-    role: "Product Engineer, Playground",
-    summary: "Launched design systems and prototyped new interaction models.",
+    range: "2009 — 2016",
+    role: "San Luis Elementary School",
+    summary: "Finished Kindergarden and all the way from Grade 1 to 6.",
   },
 ];
 
