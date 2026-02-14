@@ -6,8 +6,8 @@ const contactInfo = [
   {
     icon: "✉️",
     label: "Email",
-    value: "paulvismonte0@example.com",
-    href: "mailto:paulvismonte0@example.com",
+    value: "paulvismonte0@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=paulvismonte0@gmail.com",
   },
   {
     icon: "💼",
