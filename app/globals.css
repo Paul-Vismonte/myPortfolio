@@ -149,3 +149,7 @@ body::after {
     scroll-behavior: auto !important;
   }
 }
+
+.mouse-light {
+  transition: opacity 0.3s ease;
+}
