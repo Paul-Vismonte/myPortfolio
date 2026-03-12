@@ -28,39 +28,39 @@ const aboutPoints = [
 
 const workExperiences = [
   {
-    id: "ibm",
-    role: "Software Engineer Intern",
-    company: "IBM",
-    period: "Jan. 2026 — Present",
-    bullets: ["Full-Stack AI Engineering", "watsonx Workshop"],
-    badge: "IBM",
+    id: "AI Work",
+    role: "AI Crop Disease Detection System",
+    company: "AI Work",
+    period: "2025 – Present",
+    bullets: ["Trained model using a custom agricultural dataset", "Developed a mobile-friendly interface for farmers"],
+    badge: "AI",
     logoBg: "bg-[#1f1b3a]",
   },
   {
-    id: "wonderland",
-    role: "IT Technician",
-    company: "Canada's Wonderland",
-    period: "May 2024 — Dec. 2025",
-    bullets: ["Maintained attraction control systems", "Rolled out monitoring dashboards"],
-    badge: "CW",
+    id: "APG",
+    role: "Intern",
+    company: "AP Global IT Solutions Inc.",
+    period: "May 2025 — June 2025",
+    bullets: ["Developed frontend features using React", "Assisted in building REST APIs", "Improved page performance by 20%"],
+    badge: "APG",
     logoBg: "bg-[#1b2640]",
   },
   {
     id: "mackenzie",
-    role: "System Support Specialist",
-    company: "Mackenzie Health",
-    period: "2019 — 2024",
-    bullets: ["Automated incident workflows", "Supported clinical launches"],
-    badge: "MH",
+    role: "IT Support Assistant",
+    company: "Regular Maintainance on PC in School",
+    period: "2023 - 2024",
+    bullets: ["Checking Hardware Components", "Troubleshooting software issues"],
+    badge: "ITS",
     logoBg: "bg-[#1a2238]",
   },
   {
-    id: "staples",
-    role: "Tech Sales Associate",
-    company: "Staples Canada (Co-op)",
-    period: "2017 — 2019",
-    bullets: ["Led device demos", "Upskilled team on POS tooling"],
-    badge: "SC",
+    id: "GIT",
+    role: "Open Source Contributor",
+    company: "GitHub",
+    period: "2025 – Present",
+    bullets: ["Contributed code improvements and bug fixes to open-source projects", "Collaborated with developers through pull requests and code reviews", " Improved documentation and usability of community tools"],
+    badge: "GIT",
     logoBg: "bg-[#2a1b3f]",
   },
 ];
@@ -312,7 +312,7 @@ export default function About() {
             </p>
             <h2 className="text-5xl font-semibold text-white">Experience</h2>
             <p className="text-base text-white/70">
-              A rotating roster of roles focused on systems thinking, shipping velocity, and story-driven craft.
+             A range of roles centered on systems thinking, efficient delivery, and thoughtful product development.
             </p>
           </motion.div>
 
