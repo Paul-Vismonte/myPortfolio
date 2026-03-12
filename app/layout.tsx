@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Poppins, Dancing_Script } from "next/font/google";
-import MouseLight from "./components/MouseLight";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -29,10 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${dancingScript.variable}`}>
       <body className="antialiased bg-(--background) text-(--foreground)">
-        <MouseLight />
-        <div style={{ position: "relative", zIndex: 2 }}>
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Card from "./Card";
 
 const navItems = [
@@ -27,6 +27,58 @@ const focusAreas = [
 
 export default function Hero() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [typedText, setTypedText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
+  const [clickAnimation, setClickAnimation] = useState(false);
+  const fullText = "luminous web systems";
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= fullText.length) {
+        setTypedText(fullText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        setIsTyping(false);
+        clearInterval(typingInterval);
+      }
+    }, 120);
+
+    return () => clearInterval(typingInterval);
+  }, []);
+
+  const handleTextClick = () => {
+    if (!isTyping) {
+      setClickAnimation(true);
+      setTimeout(() => setClickAnimation(false), 1000);
+      
+      setTypedText("");
+      setIsTyping(true);
+      let currentIndex = 0;
+      const typingInterval = setInterval(() => {
+        if (currentIndex <= fullText.length) {
+          setTypedText(fullText.slice(0, currentIndex));
+          currentIndex++;
+        } else {
+          setIsTyping(false);
+          clearInterval(typingInterval);
+        }
+      }, 80);
+    }
+  };
+
+  const handleTextAnimation = () => {
+    // Trigger particle explosion effect
+    const particles = Array.from({ length: 12 }, (_, i) => ({
+      id: i,
+      x: Math.random() * 100 - 50,
+      y: Math.random() * 100 - 50,
+      scale: Math.random() * 0.5 + 0.5,
+      duration: Math.random() * 0.5 + 0.5
+    }));
+    return particles;
+  };
 
   return (
     <section className="relative z-10 flex min-h-screen flex-col gap-12 overflow-hidden px-6 pb-24 pt-10 lg:px-20">
@@ -133,8 +185,77 @@ export default function Hero() {
           <div className="space-y-6">
             <h1 className="text-4xl font-semibold leading-[1.08] text-white sm:text-5xl lg:text-[4.6rem] lg:leading-[1.02]">
               Creative engineer building
-              <span className="block bg-linear-to-r from-(--accent) via-(--accent-strong) to-white bg-clip-text text-transparent">
-                luminous web systems
+              <span className="block relative">
+                {clickAnimation && (
+                  <div className="absolute inset-0 pointer-events-none">
+                    {Array.from({ length: 8 }, (_, i) => (
+                      <motion.div
+                        key={i}
+                        className="absolute w-2 h-2 bg-(--accent) rounded-full"
+                        style={{
+                          left: '50%',
+                          top: '50%',
+                        }}
+                        initial={{ 
+                          scale: 0,
+                          x: 0,
+                          y: 0,
+                          opacity: 1
+                        }}
+                        animate={{
+                          scale: [0, 1.5, 0],
+                          x: (Math.random() - 0.5) * 200,
+                          y: (Math.random() - 0.5) * 200,
+                          opacity: [1, 0.8, 0]
+                        }}
+                        transition={{
+                          duration: 0.8,
+                          delay: i * 0.05,
+                          ease: "easeOut"
+                        }}
+                      />
+                    ))}
+                  </div>
+                )}
+                <motion.span 
+                  className="block bg-linear-to-r from-(--accent) via-(--accent-strong) to-white bg-clip-text text-transparent cursor-pointer select-none transition-transform hover:scale-105"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  onClick={handleTextClick}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {typedText}
+                  <motion.span 
+                    className="inline-block ml-1"
+                    animate={{ 
+                      opacity: isTyping ? [1, 0] : (isHovered ? [1, 0.3, 1] : 1),
+                      scale: isHovered ? 1.2 : 1
+                    }}
+                    transition={{ 
+                      opacity: { duration: isTyping ? 0.8 : 1.5, repeat: isTyping ? Infinity : (isHovered ? Infinity : 0) },
+                      scale: { duration: 0.3 }
+                    }}
+                  >
+                    |
+                  </motion.span>
+                </motion.span>
+                <motion.span 
+                  className="absolute inset-0 bg-linear-to-r from-(--accent) via-(--accent-strong) to-white bg-clip-text text-transparent blur-lg"
+                  animate={{ 
+                    opacity: isHovered ? [0.4, 0.7, 0.4] : [0.3, 0.5, 0.3],
+                    scale: isHovered ? 1.05 : 1
+                  }}
+                  transition={{ 
+                    opacity: { duration: isHovered ? 1 : 2, repeat: Infinity, ease: "easeInOut" },
+                    scale: { duration: 0.3 }
+                  }}
+                >
+                  {typedText}
+                </motion.span>
               </span>
               with cinematic code.
             </h1>
