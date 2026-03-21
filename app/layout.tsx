@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Poppins, Dancing_Script } from "next/font/google";
+import MouseLight from "./components/MouseLight";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -28,7 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${dancingScript.variable}`}>
       <body className="antialiased bg-(--background) text-(--foreground)">
-        {children}
+        <MouseLight />
+        <div className="corner-decoration corner-tl" />
+        <div className="corner-decoration corner-tr" />
+        <div className="corner-decoration corner-bl" />
+        <div className="corner-decoration corner-br" />
+        <div style={{ position: "relative", zIndex: 2 }}>
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -94,7 +94,7 @@ export default function Hero() {
           <div className="flex items-center justify-between w-full md:w-auto">
             <div className="flex items-center gap-4">
               <span className="rounded-2xl bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.5em] text-white/80">
-                PV · 2026
+                Paul Vismonte
               </span>
               <p className="font-script text-2xl text-white">Portfolio</p>
             </div>

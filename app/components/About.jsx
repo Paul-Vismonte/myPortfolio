@@ -69,19 +69,21 @@ const craftBadges = ["Creative dev", "Design systems"];
 
 const featuredProjects = [
   {
-    title: "Lumen Atlas",
-    summary: "Immersive climate intelligence hub combining photoreal WebGL scenes with volumetric data overlays.",
-    stack: ["Next.js", "WebGL", "GSAP"],
+    title: "EduSchedule",
+    summary: "A web-based system for managing teacher accounts, class schedules, and student records.",
+    stack: ["JavaScript", "PHP", "MySQL"],
     year: "2025",
-    href: "https://github.com",
+    href: "https://github.com/Paul-Vismonte/EduSchedule",
+    link: "https://duschedule.infinityfree.me/login.php",
     background: "linear-gradient(135deg,#2b1b56 0%,#0c142f 55%,#050816 100%)",
   },
   {
-    title: "Prisma Forge",
-    summary: "Design system generator syncing tokens across Figma, code, and docs through AI-assisted workflows.",
-    stack: ["Node", "Edge", "Figma API"],
+    title: "Tourist Spots Web Platform",
+    summary: "An immersive, collaboratively developed travel platform showcasing local attractions with interactive maps and real-time feedback, built for performance and secure cloud integration.",
+    stack: ["Next.js", "Tailwind CSS", "Drizzle Orm"],
     year: "2024",
-    href: "https://github.com",
+    href: "https://github.com/Mangulabnan-Bernard/touristspots",
+    link: "https://touristspots-nine.vercel.app/",
     background: "linear-gradient(135deg,#1b294f 0%,#132043 60%,#050816 100%)",
   },
   {
@@ -89,7 +91,8 @@ const featuredProjects = [
     summary: "Realtime multiplayer dashboard for energy teams with shader-driven charts and latency budgets.",
     stack: ["Three.js", "WebSockets", "AWS"],
     year: "2023",
-    href: "https://github.com",
+    href: "https://github.com/Paul-Vismonte/pulse-arcade",
+    link: "https://pulse-arcade-demo.com",
     background: "linear-gradient(135deg,#2b1b3a 0%,#10152f 55%,#050816 100%)",
   },
 ];
@@ -98,6 +101,7 @@ const educationTimeline = [
   {
     range: "May — July (2025)",
     role: "AP Global IT Solutions Inc.",
+    
     summary:
       "Studied in AP Global IT Solutions Inc as a Web Designer for Internship for 2 months.",
   },
@@ -395,11 +399,11 @@ export default function About() {
         >
           <p className="text-xs font-semibold uppercase tracking-[0.5em] text-(--muted)">Projects</p>
           <h2 className="text-4xl font-semibold text-white sm:text-5xl lg:text-[3.5rem]">
-            Partnering with bold teams to design the unexpected.
+            Personal and Team-Based Projects
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-(--muted)">
-            Inspired by Sunny&apos;s mix of story-driven timelines and glowing surfaces. I bring the same
-            energy—mixing React, Next.js, GSAP, and WebGL to ship expressive experiences.
+            Focused on narrative driven timelines and visually dynamic interfaces, I leverage 
+            React, Next.js, GSAP, and WebGL to build engaging user experiences.
           </p>
         </motion.div>
 
@@ -411,11 +415,8 @@ export default function About() {
           viewport={{ once: true, margin: "-100px" }}
         >
           {featuredProjects.map((project) => (
-            <a
+            <div
               key={project.title}
-              href={project.href}
-              target="_blank"
-              rel="noreferrer"
               style={{ background: project.background }}
               className="group flex flex-col rounded-[32px] border border-white/10 p-6 text-white shadow-[0_25px_60px_rgba(5,8,22,0.6)] transition hover:-translate-y-2 hover:shadow-[0_35px_90px_rgba(3,4,15,0.75)]"
             >
@@ -435,10 +436,27 @@ export default function About() {
                   </span>
                 ))}
               </div>
-              <span className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.4em] text-white/80">
-                View build <span aria-hidden className="transition group-hover:translate-x-1">↗</span>
-              </span>
-            </a>
+              <div className="mt-8 flex gap-4">
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.4em] text-white/80 transition hover:text-white group"
+                >
+                  <span>GitHub</span>
+                  <span aria-hidden className="transition group-hover:translate-x-1">↗</span>
+                </a>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.4em] text-white/80 transition hover:text-white group"
+                >
+                  <span>Live</span>
+                  <span aria-hidden className="transition group-hover:translate-x-1">↗</span>
+                </a>
+              </div>
+            </div>
           ))}
         </motion.div>
       </section>
