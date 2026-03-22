@@ -85,13 +85,13 @@ export default function PDFViewer({ isOpen, onClose, pdfUrl }) {
                     <span className="font-semibold text-black">Programming:</span> JavaScript, TypeScript, Python, Java, PHP
                   </div>
                   <div className="text-black">
-                    <span className="font-semibold text-black">Frontend:</span> React.js, Next.js, HTML, CSS, Tailwind CSS, GSAP, Three.js, WebGL
+                    <span className="font-semibold text-black">Frontend:</span> React.js, Next.js, HTML, CSS, Tailwind CSS, GSAP, WebGL
                   </div>
                   <div className="text-black">
                     <span className="font-semibold text-black">Backend:</span> Node.js, Express.js, PHP, MySQL
                   </div>
                   <div className="text-black">
-                    <span className="font-semibold text-black">Tools & DevOps:</span> Git, GitHub, Vercel, Firebase, CI/CD
+                    <span className="font-semibold text-black">Tools & DevOps:</span> Git, GitHub, Vercel, CI/CD
                   </div>
                   <div className="text-black">
                     <span className="font-semibold text-black">Other:</span> REST APIs, Responsive Design, UI/UX, Web Performance Optimization
@@ -114,7 +114,7 @@ export default function PDFViewer({ isOpen, onClose, pdfUrl }) {
                 <h2 className="text-2xl font-semibold text-black mb-6 border-b-2 border-gray-400 pb-2">PROJECTS</h2>
                 <div className="space-y-8">
                   <div>
-                    <h3 className="text-xl font-semibold text-black">EduSchedule | JavaScript, PHP, MySQL</h3>
+                    <h3 className="text-xl font-semibold text-black">EduSchedule | JavaScript, PHP, MySQL — 2025</h3>
                     <p className="text-black text-base mt-2">
                       Developed a comprehensive web-based system for managing teacher accounts, class schedules, and student records with modern UI
                     </p>
@@ -126,7 +126,7 @@ export default function PDFViewer({ isOpen, onClose, pdfUrl }) {
                   </div>
                   
                   <div>
-                    <h3 className="text-xl font-semibold text-black">Tourist Spots Web Platform | Next.js, Tailwind CSS, Drizzle ORM</h3>
+                    <h3 className="text-xl font-semibold text-black">Tourist Spots Web Platform | Next.js, Tailwind CSS, Drizzle ORM — 2024</h3>
                     <p className="text-black text-base mt-2">
                       Developed an immersive travel platform showcasing local tourist attractions with interactive maps and real-time feedback
                     </p>
@@ -139,7 +139,7 @@ export default function PDFViewer({ isOpen, onClose, pdfUrl }) {
                   </div>
                   
                   <div>
-                    <h3 className="text-xl font-semibold text-black">Portfolio Website | Next.js, Tailwind CSS, Vercel</h3>
+                    <h3 className="text-xl font-semibold text-black">Portfolio Website | Next.js, Tailwind CSS, Vercel — 2026</h3>
                     <p className="text-black text-base mt-2">
                       Designed and developed a modern personal portfolio with interactive user interface elements
                     </p>
