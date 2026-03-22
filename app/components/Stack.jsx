@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const stackRows = [
   ["React", "Next.js", "TypeScript", "Framer Motion", "Tailwind"],
-  ["Three.js", "WebGL", "ShaderToy", "GSAP", "WebGL2"],
-  ["AWS", "Edge Runtimes", "CI/CD", "Design Systems", "Storybook"],
+  ["WebGL", "ShaderToy", "GSAP", "WebGL2"],
+  ["Edge Runtimes", "CI/CD", "Design Systems", "Storybook"],
 ];
 
 const stackMeta = [
