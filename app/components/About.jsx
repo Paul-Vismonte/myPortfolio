@@ -181,17 +181,17 @@ const featuredProjects = [
 
   {
 
-    title: "BarberHub",
+    title: "BookSeek",
 
-    summary: "A marketing and POS application for barbershops with appointment scheduling and inventory management.",
+    summary: "A web application for searching and discovering books with detailed information and accounts for saving books to ready in the future.",
 
-    stack: ["React", "Node.js", "MongoDB"],
+    stack: ["React", "Node.js", "Mysqlite"],
 
-    year: "2023",
+    year: "2025",
 
-    href: "https://github.com/Paul-Vismonte/BarberHub",
+    href: "https://github.com/Paul-Vismonte/BookSeek",
 
-    link: "https://barberhub-demo.com",
+    link: "https://book-gilt-seven.vercel.app/",
 
     background: "linear-gradient(135deg,#2b1b3a 0%,#10152f 55%,#050816 100%)",
 
