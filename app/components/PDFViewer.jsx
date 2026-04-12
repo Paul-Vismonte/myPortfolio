@@ -387,7 +387,7 @@ export default function PDFViewer({ isOpen, onClose, pdfUrl }) {
         <div class="education-item">
             <h3>Bachelor of Science in Computer Science</h3>
             <p>Holy Cross College, Philippines | 2020 - 2024</p>
-            <p style="font-family: 'Arial', sans-serif; font-size: 0.9em; font-style: italic;">Graduated with honors, web development specialization</p>
+            <p style="font-family: 'Arial', sans-serif; font-size: 0.9em; font-style: italic;">Graduated, web development specialization</p>
         </div>
     </div>
 
